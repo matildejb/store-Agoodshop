@@ -1,37 +1,108 @@
 * {
 	box-sizing: border-box;
+	
+}
+
+/*Common*/
+
+:root {
+	--gray-300: #D4D4D8;
+	--gray-700: #3F3F46;
+	--base-white: #FFFFFF;
+	--red-600: #D62626;
+	--blue--500: #3B82F6;
+	--blue--800: #1E40AF;
+	--green-500: #22C55E;
+	--font-weight-bold: 700;
+	--font-weight-normal: 400;
+}
+
+body {
 	font-family: "Roboto", sans-serif;
 }
 
+.heading-7,
+.heading-5,
+.heading-3 {
+	font-weight: var(--font-weight-bold);
+}
+
+.heading-7 {
+	font-size: 2.875rem;
+}
+.heading-5 {
+	font-size: 2.25rem;
+}
+.heading-3 {
+	font-size: 1.375rem;
+}
+
 .btn {
-	background-color: #4169e1;
+	background-color: var(--base-white);
 	color: white;
 	padding: 8px 10px;
-	border-radius: 5px;
-	border: 1px solid rgb(21, 21, 171);
+	border-radius: 6px;
+	border: 1px solid var(--gray-300);
 	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: var(--gray-700);
+	color: var(--base-white);
+	cursor: pointer;
+}
+
+.btn--contactar {
+	color: var(--gray-700);
+}
+
+.btn--primary {
+	background-color: var(--blue--500);
+	color: var(--base-white);
+	border-color: var(--blue--800);
+}
+
+.btn--primary:hover {
+	background-color: var(--blue--800);
+}
+
+.btn--oferta {
+	background-color: var(--red-600);
+	padding: 4px 8px;
+	border: 1px solid rgb(186, 6, 6);
+}
+
+.btn--oferta:hover {
+	background-color: #8b0000;
+}
+
+.btn--cargador {
+	padding: 4px 8px;
+
 }
 
 a {
 	text-decoration: none;
+	color: black;
 }
 
 /*Centra nuestro contenido*/
 .wrapper {
-	max-width: 950px;
+	max-width: 1050px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-/*hr nav y footer*/
-hr {
-	color: #aeaeae;
-	margin-top: 0;
+/*linea horizontal*/
+.the-header {
+	border-bottom: 1px solid var(--gray-300);
+	padding: 8px 0;
+}
+.the-footer {
+	border-top: 1px solid var(--gray-300);
+	padding: 8px 0;
 }
 
-.foot {
-	margin-top: 35px;
-}
 
 /*ENCABEZADOS*/
 
@@ -40,111 +111,90 @@ h1 {
 	margin: 5px 0;
 }
 
-/*Paticipa en el sorteo*/
-h2 {
-	font-size: 2.4rem;
-}
-
-/*Accesorios recomendados* y Nav(agoodshop)*/
-h3 {
-	font-size: 1.8rem;
-}
-
 /*Títulos en accesorios*/
 h4 {
 	font-size: 1.2rem;
 	margin: 15px 0px;
 }
 
-/*NAV*/
-nav {
+/*HEADER*/
+.the-header__inner {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
-.nav-logo {
-	font-weight: bolder;
-	font-size: 1.1rem;
-}
 
-.nav-lista {
+.the-header__nav {
 	display: flex;
+	align-items: center;
 	list-style: none;
 	gap: 20px;
 }
-.nav-lista,
-.contact {
-	margin-left: auto;
-}
 
-.contact {
-	background-color: #ffffff;
-	border: 1px solid #aeaeae;
-	padding: 8px 10px;
-	border-radius: 5px;
-	margin-left: 20px;
-	cursor: pointer;
-}
 
 /*MAIN*/
 
 /*Primer Parte*/
-.main-content {
+
+.the-product {
+	margin-top: 32px;
+}
+
+main {
+	padding-bottom: 30px;
+}
+
+.the-product-info__img {
 	display: flex;
 	align-items: flex-start;
 	gap: 30px;
 	margin-top: 25px;
 }
 
-.main-image {
+.the-product-w__img {
 	position: relative;
 }
 
-.imgGray {
+.the-product__img {
 	width: 360px;
 	height: 360px;
 }
 
-.imgGreen {
+.the-product__gb {
 	position: absolute;
-	color: white;
-	background-color: rgb(42, 175, 42);
+	color: var(--base-white);
+	background-color: var(--green-500); 
 	padding: 8px 7px;
 	top: 20px;
 	left: 20px;
-	border: 1px solid white;
+	border: 1px solid var(--base-white);
 }
 
-.main-text {
+.the-product-main__info {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 }
 
 .text-ofert {
-	color: red;
-	font-weight: 900;
-	font-size: 0.8rem;
+	color: var(--red-600);
+	font-weight: var(--font-weight-bold);
 	margin: 0;
+	text-transform: uppercase;
 }
 
-.main-paragraph {
+.the-product__description {
 	text-align: justify;
-	font-size: 0.84rem;
 }
 
-.price-buy {
+.the-product-w__buy {
 	display: flex;
+	gap: 20px;
 }
 
-.price {
-	font-weight: bolder;
-	font-size: 1.8rem;
-	margin-right: 20px;
-}
 
-.characteristics {
+.the-product__feautures {
 	display: flex;
 	margin-top: 10px;
 	font-size: 0.9rem;
@@ -160,9 +210,8 @@ nav {
 }
 
 /*Segunda Parte*/
-.container {
+.the-product__accesorios {
 	display: flex;
-	/*flex-wrap: wrap;*/
 	font-size: 1rem;
 	gap: 20px;
 	margin-bottom: 40px;
@@ -173,24 +222,14 @@ nav {
 	border-radius: 4px;
 	border: 1px solid #aeaeae;
 	padding: 10px 10px 7px 10px;
-	font-size: 0.85rem;
-	max-width: 222px;
+	width: 100%;
 }
 
 .card img {
-	width: 200px;
+	width: 100%;
 	height: 150px;
 }
 
-.oferta {
-	background-color: red;
-	border: 1px solid rgb(186, 6, 6);
-	font-size: 0.7rem;
-}
-
-.btn-cargador {
-	font-size: 0.7rem;
-}
 
 .card-body p {
 	margin-top: 25px;
@@ -230,7 +269,6 @@ input {
 /*FOOTER*/
 
 .footer {
-	/*border-top: 1px solid gray;*/
 	display: flex;
 	justify-content: center;
 	padding: 8px 0;
@@ -240,7 +278,7 @@ input {
 
 /*RESPONSIVE MOBILE*/
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 760px) {
 	
     h1 {
 		font-size: 2.1rem;
@@ -252,16 +290,9 @@ input {
 		margin-top: 20px;
 	}
     
-    h3.accesorios {
-		width: 80%;
-		margin: auto;
-		margin-bottom: 20px;
-		font-size: 2.1rem;
-	}
-
 
     /*NAV*/
-	nav {
+	.the-header__inner {
 		flex-direction: column;
 	}
 
@@ -273,42 +304,39 @@ input {
 
     /*Ocultar elemento y Eliminar espacio que ocupa*/
 
-	.nav-lista {
-		display: none;
-	}
-	.contact {
+	.the-header__nav {
 		display: none;
 	}
 
 	/*MAIN*/
 
     /*Primer Parte*/
-	.main-content {
+	.the-product-info__img, h3 {
 		display: flex;
 		flex-direction: column;
 		width: 80%;
 		margin: auto;
 	}
 
-	.main-image {
+	.the-product-w__img {
 		margin: auto;
 		width: 100%;
 	}
-	.imgGray {
+	.the-product__img {
 		width: 100%;
 	}
 
-	.main-paragraph {
-		font-size: 0.96rem;
+	.the-product__description {
 		margin-bottom: 10px;
 	}
 
-	.characteristics {
+	.the-product__feautures {
 		display: flex;
 		flex-wrap: wrap;
 		font-size: 1rem;
 		gap: 30px;
 		margin-top: 20px;
+		margin-bottom: 20px;
 	}
 
 	.item {
@@ -316,19 +344,18 @@ input {
 	}
 
     /*Segunda Parte*/
-	.main-accesorios {
-		margin: auto;
-		margin-top: 30px;
+	.acc {
+		margin-bottom: 20px;
 	}
 
-	.container {
+	.the-product__accesorios  {
 		flex-direction: column;
-		margin: auto;
-		width: 80%;
+		width: 100%;
 	}
 	
 	.card {
-		max-width: 100%;
+		max-width: 80%;
+		margin: auto;
 	}
 
 	
@@ -339,6 +366,7 @@ input {
 
 	.card-body p {
 		font-size: 1rem;
+		
 	}
 
 	.carga-inalambrica {
