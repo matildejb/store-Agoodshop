@@ -60,6 +60,10 @@ body {
 	background-color: var(--blue--500);
 	color: var(--base-white);
 	border-color: var(--blue--800);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 }
 
 .btn--primary:hover {
@@ -78,7 +82,13 @@ body {
 
 .btn--cargador {
 	padding: 4px 8px;
+	background-color: var(--blue--500);
+	color: var(--base-white);
+	border-color: var(--blue--800);
 
+}
+.btn--cargador:hover {
+	background-color: var(--blue--800);
 }
 
 a {
@@ -157,8 +167,8 @@ main {
 }
 
 .the-product__img {
-	width: 360px;
-	height: 360px;
+	width: 350px;
+	height: 400px;
 }
 
 .the-product__gb {
@@ -191,6 +201,7 @@ main {
 .the-product-w__buy {
 	display: flex;
 	gap: 20px;
+	
 }
 
 
@@ -244,8 +255,7 @@ main {
 
 .text-participa {
 	padding: 20px 40px;
-	max-width: 63%;
-	font-size: 0.9rem;
+	max-width: 60%;
 }
 
 .text-participa p {
@@ -257,7 +267,7 @@ form {
 }
 
 input {
-	width: 240px;
+	width: 270px;
 	margin-left: 2px;
 	padding: 8px;
 	border: 1px solid gray;
@@ -278,7 +288,7 @@ input {
 
 /*RESPONSIVE MOBILE*/
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 780px) {
 	
     h1 {
 		font-size: 2.1rem;
@@ -291,7 +301,7 @@ input {
 	}
     
 
-    /*NAV*/
+    /*HEADER*/
 	.the-header__inner {
 		flex-direction: column;
 	}
@@ -346,6 +356,7 @@ input {
     /*Segunda Parte*/
 	.acc {
 		margin-bottom: 20px;
+		
 	}
 
 	.the-product__accesorios  {
